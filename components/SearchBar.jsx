@@ -6,21 +6,24 @@ const SearchBar = ({ handleSearch, searchTerm }) => {
   };
 
   return (
-    <form className="flex pl-8 gap-4">
-      <input
-        aria-label="Search repositories"
-        onChange={handleChange}
-        value={searchTerm}
-        type="text"
-        placeholder="Search repositories..."
-        className="placeholder-gray-600 placeholder:p-2 placeholder:italic rounded-lg"
-      />
-      <button
-        type="submit"
-        className="bg-[#4AA2D9] text-white font-semibold p-2 rounded-lg"
-      >
-        Search
-      </button>
+    <form className="flex gap-4 items-center justify-center mx-16 md:mx-96 ">
+      <div className="relative w-full ">
+        <input
+          aria-label="Search repositories"
+          onChange={handleChange}
+          value={searchTerm}
+          type="text"
+          placeholder="Search repositories..."
+          className="placeholder-gray-400 placeholder:p-2 placeholder:italic focus:outline-none focus:ring-0 rounded-xl w-full h-14"
+          style={{ padding: "0.75rem" }}
+        />
+        <button
+          type="submit"
+          className="absolute inset-y-0 right-0 bg-[#4AA2D9] text-white font-semibold p-2 self-center rounded-xl my-4 mr-2"
+        >
+          Search
+        </button>
+      </div>
     </form>
   );
 };

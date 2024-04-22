@@ -62,7 +62,7 @@ const RepoPage = () => {
   return (
     <main className="bg-[#B3D5F2]/20 dark:bg-gray-900">
       {/* Skip to main navigation Link */}
-      <a href="#main-navigation" className="sr-only focus:not-sr-only">
+      <a href="#main-navigation" className="sr-only focus:not-sr-only bg-white">
         Skip to main navigation
       </a>
 
@@ -86,14 +86,14 @@ const RepoPage = () => {
       <section className="flex items-center justify-evenly  dark:bg-gray-900 bg-[#B3D5F2]/20">
         <button
           onClick={handle404Test}
-          className="bg-[#D9042B]/80 dark:bg-white dark:text-[#D9042B]/80 text-white font-semibold p-2 mb-20 rounded-lg"
+          className="bg-[#D9042B]/80 dark:bg-white dark:text-[#D9042B]/80 text-white font-semibold p-3 mb-20 rounded-lg"
           aria-label="Test 404 Page"
         >
           Test 404 Page
         </button>
         <button
           onClick={handleErrorBoundaryTest}
-          className="bg-[#D9042B]/80 dark:bg-white dark:text-[#D9042B]/80 text-white font-semibold p-2 mb-20 rounded-lg"
+          className="bg-[#D9042B]/80 dark:bg-white dark:text-[#D9042B]/80 text-white font-semibold p-3 mb-20 rounded-lg"
           aria-label="Test Error Boundary"
         >
           Test Error Boundary

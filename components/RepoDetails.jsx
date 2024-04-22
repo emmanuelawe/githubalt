@@ -50,38 +50,38 @@ const RepoDetails = () => {
         <table className="w-full text-left table-fixed">
           <thead className="bg-blue-500">
             <tr>
-              <th className="w-[50%] py-2 px-4">Description</th>
-              <th className="w-[50%] py-2 px-4 ">Data</th>
+              <th className="w-[50%] py-4 px-4">Description</th>
+              <th className="w-[50%] py-4 px-4 ">Data</th>
             </tr>
           </thead>
           <tbody className=" divide-y">
             <tr className="bg-[#4AA2D9]/30">
-              <td className="py-2 px-4">Repo name</td>
-              <td className="py-2 px-4">{repo.name}</td>
+              <td className="py-4 px-4">Repo name</td>
+              <td className="py-4 px-4">{repo.name}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/50">
-              <td className="py-2 px-4">Owner</td>
-              <td className="py-2 px-4">{repo.owner.login}</td>
+              <td className="py-4 px-4">Owner</td>
+              <td className="py-4 px-4">{repo.owner.login}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/30">
-              <td className="py-2 px-4">Default branch</td>
-              <td className="py-2 px-4">{repo.default_branch}</td>
+              <td className="py-4 px-4">Default branch</td>
+              <td className="py-4 px-4">{repo.default_branch}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/50">
-              <td className="py-3 px-4">Repo Description</td>
-              <td className="py-2 px-4">{repo.description}</td>
+              <td className="py-4 px-4">Repo Description</td>
+              <td className="py-4 px-4">{repo.description}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/30">
-              <td className="py-2 px-4">Forks</td>
-              <td className="py-2 px-4">{repo.forks_count}</td>
+              <td className="py-4 px-4">Forks</td>
+              <td className="py-4 px-4">{repo.forks_count}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/50">
-              <td className="py-2 px-4">Issues</td>
-              <td className="py-2 px-4">{repo.open_issues_count}</td>
+              <td className="py-4 px-4">Issues</td>
+              <td className="py-4 px-4">{repo.open_issues_count}</td>
             </tr>
             <tr className="bg-[#4AA2D9]/30">
-              <td className="py-2 px-4">Language</td>
-              <td className="py-2 px-4">{repo.language}</td>
+              <td className="py-4 px-4">Language</td>
+              <td className="py-4 px-4">{repo.language}</td>
             </tr>
           </tbody>
         </table>

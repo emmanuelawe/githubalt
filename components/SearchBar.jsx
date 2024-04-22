@@ -1,12 +1,26 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = ({ handleSearch, searchTerm }) => {
+  const navigate = useNavigate();
+  const user = "emmanuelawe";
+
   const handleChange = (event) => {
     handleSearch(event.target.value);
   };
 
+  const handleSubmit = () => {
+    e.preventDefault();
+    if (searchTerm.trim() !== "") {
+      const user = "emmanuelawe";
+      navigate(`/repos/${user}/${searchTerm}`);
+    }
+  };
+
   return (
-    <form className="flex gap-4 pb-10 items-center justify-center mx-16 md:mx-96 ">
+    <form
+      onSubmit={handleSubmit}
+      className="flex gap-4 pb-10 items-center justify-center mx-12 md:mx-96 "
+    >
       <div className="relative w-full ">
         <input
           aria-label="Search repositories"
@@ -14,8 +28,8 @@ const SearchBar = ({ handleSearch, searchTerm }) => {
           value={searchTerm}
           type="text"
           placeholder="Search repositories..."
-          className="placeholder-gray-400 placeholder:p-2 placeholder:italic focus:outline-none focus:ring-0 rounded-xl w-full h-14"
-          style={{ padding: "0.75rem" }}
+          className="placeholder-gray-400 placeholder:italic focus:outline-none focus:ring-0 rounded-xl w-full h-14"
+          style={{ padding: "1rem" }}
         />
         <button
           type="submit"

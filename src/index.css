@@ -6,7 +6,10 @@
 
 @layer base {
     body {
-        @apply font-poppins dark:bg-gray-700 bg-[#B3D5F2]/20 
+        @apply font-poppins
     }
+    html {
+        @apply dark:bg-gray-700 bg-[#B3D5F2]/20 
+     }
     
 }

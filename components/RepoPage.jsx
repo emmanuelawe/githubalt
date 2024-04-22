@@ -6,6 +6,7 @@ import { Octokit } from "octokit";
 import { useNavigate } from "react-router-dom";
 import { useErrorBoundary } from "react-error-boundary";
 import ExistImg from "../src/assets/exist.png";
+import Gitwiki from "../src/assets/logo.png";
 import LoadingUI from "./LoadingUI";
 
 const octokit = new Octokit({
@@ -60,10 +61,17 @@ const RepoPage = () => {
 
   return (
     <main className="bg-[#B3D5F2]/20 dark:bg-gray-900">
-     {/* Skip to main navigation Link */}
-    <a href="#main-navigation" className="sr-only focus:not-sr-only" >Skip to main navigation</a>
+      {/* Skip to main navigation Link */}
+      <a href="#main-navigation" className="sr-only focus:not-sr-only">
+        Skip to main navigation
+      </a>
 
-      <section id="main-navigation" className="flex flex-col pt-20 ">
+      <section id="main-navigation" className="flex flex-col pt-20">
+        <img
+          src={Gitwiki}
+          alt="Gitwiki logo"
+          className="w-32 md:w-48 self-center pb-10"
+        />
         <SearchBar handleSearch={handleSearch} searchTerm={searchTerm} />
         {filteredRepos.length === 0 && searchTerm && (
           <div className="justify-center items-center h-screen flex flex-col">
@@ -75,7 +83,7 @@ const RepoPage = () => {
         )}
         <RepoList repos={filteredRepos} />
       </section>
-      <section className="flex items-center justify-evenly pt-10 dark:bg-gray-900 bg-[#B3D5F2]/20">
+      <section className="flex items-center justify-evenly  dark:bg-gray-900 bg-[#B3D5F2]/20">
         <button
           onClick={handle404Test}
           className="bg-[#D9042B]/80 dark:bg-white dark:text-[#D9042B]/80 text-white font-semibold p-2 mb-20 rounded-lg"

@@ -6,7 +6,7 @@ const SearchBar = ({ handleSearch, searchTerm }) => {
   };
 
   return (
-    <form className="flex gap-4 items-center justify-center mx-16 md:mx-96 ">
+    <form className="flex gap-4 pb-10 items-center justify-center mx-16 md:mx-96 ">
       <div className="relative w-full ">
         <input
           aria-label="Search repositories"
